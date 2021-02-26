@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 void main() {
   runApp(MyApp());
@@ -62,7 +63,8 @@ class MyApp extends StatelessWidget {
               //     )),
               FlatButton(
                 onPressed: () {
-                  print('Hey!');
+                  final player = AudioCache();
+                  player.play('Sample3.mp3');
                 },
                 child: Card(
                   margin:
